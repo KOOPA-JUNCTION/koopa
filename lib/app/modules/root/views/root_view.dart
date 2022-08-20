@@ -76,6 +76,27 @@ class RootView extends GetView<RootController> {
             () => controller.centerOpened.isTrue
                 ? Container(
                     color: Colors.black.withOpacity(.4),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FloatingActionButton(
+                              onPressed: () {},
+                              child: const Icon(Icons.photo_outlined),
+                            ),
+                            const SizedBox(width: 60),
+                            FloatingActionButton(
+                              onPressed: () {},
+                              child: const Icon(Icons.camera_alt_outlined),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 40),
+                      ],
+                    ),
                   )
                 : Container(),
           )

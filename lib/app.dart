@@ -18,6 +18,9 @@ class App extends StatelessWidget {
       fallbackLocale: TranslationService.fallbackLocale,
       locale: TranslationService.locale,
       theme: ThemeData(
+        colorScheme: Get.theme.colorScheme.copyWith(
+          secondary: const Color(0xff1e299c),
+        ),
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFFF5F5F5),
           foregroundColor: Colors.black,
