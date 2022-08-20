@@ -16,6 +16,7 @@ class LocaleKeys {
   static const home_stats = 'home_stats';
   static const home_search = 'home_search';
   static const home_profile = 'home_profile';
+  static const home_popular = 'home_popular';
 }
 
 class Locales {
@@ -28,5 +29,6 @@ class Locales {
     'home_stats': 'stats',
     'home_search': 'search',
     'home_profile': 'profile',
+    'home_popular': 'Popular',
   };
 }
