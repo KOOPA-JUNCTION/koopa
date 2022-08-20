@@ -38,7 +38,7 @@ class SearchView extends GetView<SearchController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(LocaleKeys.home_search.tr),
+        title: Text(LocaleKeys.search_title.tr),
         titleTextStyle: Get.textTheme.titleLarge!.copyWith(
           fontWeight: FontWeight.w900,
           color: const Color(0xff1e299c),
@@ -119,6 +119,7 @@ class SearchView extends GetView<SearchController> {
                     title: LocaleKeys.search_trending.tr,
                     child: GridView.builder(
                       shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
                       gridDelegate:
                           const SliverGridDelegateWithMaxCrossAxisExtent(
                         maxCrossAxisExtent: 165,

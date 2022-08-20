@@ -105,7 +105,7 @@ class ProfileView extends GetView<ProfileController> {
             padding: const EdgeInsets.all(20),
             sliver: SliverGrid(
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 165,
+                maxCrossAxisExtent: 180,
                 childAspectRatio: 165 / 180,
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20,
