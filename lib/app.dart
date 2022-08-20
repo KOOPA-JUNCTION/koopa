@@ -18,6 +18,7 @@ class App extends StatelessWidget {
       fallbackLocale: TranslationService.fallbackLocale,
       locale: TranslationService.locale,
       theme: ThemeData(
+        fontFamily: 'Pretendard',
         colorScheme: Get.theme.colorScheme.copyWith(
           secondary: const Color(0xff1e299c),
         ),
