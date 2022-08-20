@@ -15,22 +15,24 @@ class ImageDetailView extends GetView<ImageDetailController> {
         title: Text(LocaleKeys.imageDetail_title.tr),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            PlatformFileImageViewer(file: controller.file),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                ElevatedButton(
-                  onPressed: controller.goToGenerateNFT,
-                  child: Text(LocaleKeys.imageDetail_create.tr),
-                ),
-              ],
-            )
-          ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              PlatformFileImageViewer(file: controller.file),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  ElevatedButton(
+                    onPressed: controller.goToGenerateNFT,
+                    child: Text(LocaleKeys.imageDetail_create.tr),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

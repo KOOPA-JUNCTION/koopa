@@ -27,6 +27,13 @@
     "create": "Create NFT"
   },
   "generateNft": {
-    "title": "Detail of NFT"
+    "title": "Detail of NFT",
+    "name": "1. Name",
+    "description": "2. Description",
+    "category": "3. Category",
+    "addCategory": "Add category",
+    "blockchain": "4. Blockchain",
+    "startingPrice": "5. Starting Price",
+    "generate": "Generate"
   }
 }

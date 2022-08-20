@@ -28,6 +28,13 @@ class LocaleKeys {
   static const imageDetail_title = 'imageDetail_title';
   static const imageDetail_create = 'imageDetail_create';
   static const generateNft_title = 'generateNft_title';
+  static const generateNft_name = 'generateNft_name';
+  static const generateNft_description = 'generateNft_description';
+  static const generateNft_category = 'generateNft_category';
+  static const generateNft_addCategory = 'generateNft_addCategory';
+  static const generateNft_blockchain = 'generateNft_blockchain';
+  static const generateNft_startingPrice = 'generateNft_startingPrice';
+  static const generateNft_generate = 'generateNft_generate';
 }
 
 class Locales {
@@ -52,5 +59,12 @@ class Locales {
     'imageDetail_title': 'Detail',
     'imageDetail_create': 'Create NFT',
     'generateNft_title': 'Detail of NFT',
+    'generateNft_name': '1. Name',
+    'generateNft_description': '2. Description',
+    'generateNft_category': '3. Category',
+    'generateNft_addCategory': 'Add category',
+    'generateNft_blockchain': '4. Blockchain',
+    'generateNft_startingPrice': '5. Starting Price',
+    'generateNft_generate': 'Generate',
   };
 }
