@@ -1,0 +1,57 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "build release appbundle"
+  lane :release do
+    sh("flutter", "build", "appbundle", "--obfuscate", "--split-debug-info=debug-info", "--release")
+  end
+
+  desc "Upload internal track only"
+  lane :internal do
+    release
+    zip(
+      path: "../build/app/intermediates/merged_native_libs/release/out/lib",
+      output_path: "../build/app/intermediates/merged_native_libs/release/out/lib/native_symbol.zip",
+      exclude: ["*.zip", ".*", "__MACOSX"]
+    )
+    upload_to_play_store(
+      aab: "../build/app/outputs/bundle/release/app-release.aab",
+      track: "internal",
+      mapping_paths: [
+        "../build/app/outputs/mapping/release/mapping.txt",
+        "../build/app/intermediates/merged_native_libs/release/out/lib/native_symbol.zip",
+      ],
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+    )
+  end
+
+  desc "Promote internal to Production"
+  lane :promote do
+    upload_to_play_store(
+      track: "internal",
+      track_promote_to: "production",
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_metadata: true,
+      skip_upload_changelogs: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+    )
+  end
+end
