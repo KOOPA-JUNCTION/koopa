@@ -17,6 +17,10 @@ class LocaleKeys {
   static const home_search = 'home_search';
   static const home_profile = 'home_profile';
   static const home_popular = 'home_popular';
+  static const search_title = 'search_title';
+  static const search_hintText = 'search_hintText';
+  static const search_allCategories = 'search_allCategories';
+  static const search_trending = 'search_trending';
 }
 
 class Locales {
@@ -30,5 +34,9 @@ class Locales {
     'home_search': 'search',
     'home_profile': 'profile',
     'home_popular': 'Popular',
+    'search_title': 'Search',
+    'search_hintText': 'Search Koopa',
+    'search_allCategories': 'All Categories',
+    'search_trending': 'Trending Collections',
   };
 }
