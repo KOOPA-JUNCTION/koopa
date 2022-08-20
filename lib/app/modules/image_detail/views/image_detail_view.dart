@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:koopa/app/components/platform_file_image_viewer.dart';
 
 import '../../../../generated/locales.g.dart';
 import '../controllers/image_detail_controller.dart';
@@ -19,7 +20,7 @@ class ImageDetailView extends GetView<ImageDetailController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.memory(controller.fileBytes),
+            PlatformFileImageViewer(file: controller.file),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [

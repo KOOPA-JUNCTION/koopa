@@ -4,10 +4,9 @@ import 'package:get/get.dart';
 import '../../../routes/app_pages.dart';
 
 class ImageDetailController extends GetxController {
-  final _file = Get.arguments['file'] as PlatformFile;
-  late final fileBytes = _file.bytes!;
+  final file = Get.arguments['file'] as PlatformFile;
 
   void goToGenerateNFT() {
-    Get.toNamed(Routes.GENERATE_NFT, arguments: {'fileBytes': fileBytes});
+    Get.toNamed(Routes.GENERATE_NFT, arguments: {'file': file});
   }
 }
