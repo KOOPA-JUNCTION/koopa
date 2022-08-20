@@ -109,6 +109,7 @@ class ProfileView extends GetView<ProfileController> {
                 childAspectRatio: 165 / 180,
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20,
+                mainAxisExtent: 180,
               ),
               delegate: SliverChildBuilderDelegate(
                 (_, index) => Container(
