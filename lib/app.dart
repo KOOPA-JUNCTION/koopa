@@ -27,6 +27,7 @@ class App extends StatelessWidget {
           foregroundColor: Colors.black,
           elevation: 0,
         ),
+        scaffoldBackgroundColor: Colors.white, 
       ),
     );
   }

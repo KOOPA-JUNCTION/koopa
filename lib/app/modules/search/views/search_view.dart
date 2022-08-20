@@ -84,12 +84,24 @@ class SearchView extends GetView<SearchController> {
                           height: 130,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(16),
-                            child: Container(color: Colors.red),
+                            child: Stack(children: [
+                              Container(color: Colors.red),
+                              Positioned(
+                                left: 16,
+                                bottom: 16,
+                                child: Text(
+                                  '$index',
+                                  style: Get.textTheme.headline6!.copyWith(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              )
+                            ]),
                           ),
                         ),
                         separatorBuilder: (_, index) =>
                             const SizedBox(width: 18),
-                        itemCount: 3,
+                        itemCount: 10,
                       ),
                     ),
                   ),
@@ -105,28 +117,75 @@ class SearchView extends GetView<SearchController> {
                 children: [
                   _TitleContent(
                     title: LocaleKeys.search_trending.tr,
-                    child: SizedBox(
-                      height: 130,
-                      child: GridView.builder(
-                        shrinkWrap: true,
-                        scrollDirection: Axis.horizontal,
-                        gridDelegate:
-                            const SliverGridDelegateWithMaxCrossAxisExtent(
-                          maxCrossAxisExtent: 130,
-                          childAspectRatio: 190 / 165,
-                          crossAxisSpacing: 20,
-                          mainAxisSpacing: 20,
-                        ),
-                        itemBuilder: (_, index) => SizedBox(
-                          width: 130,
-                          height: 130,
-                          child: ClipRRect(
+                    child: GridView.builder(
+                      shrinkWrap: true,
+                      gridDelegate:
+                          const SliverGridDelegateWithMaxCrossAxisExtent(
+                        maxCrossAxisExtent: 165,
+                        childAspectRatio: 190 / 165,
+                        crossAxisSpacing: 20,
+                        mainAxisSpacing: 20,
+                        mainAxisExtent: 165,
+                      ),
+                      itemBuilder: (_, index) => SizedBox(
+                        width: 165,
+                        height: 190,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xfffafafa),
                             borderRadius: BorderRadius.circular(16),
-                            child: Container(color: Colors.red),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(.2),
+                                blurRadius: 4,
+                              ),
+                            ],
+                          ),
+                          child: Stack(
+                            children: [
+                              Column(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: const BorderRadius.only(
+                                      topLeft: Radius.circular(16),
+                                      topRight: Radius.circular(16),
+                                    ),
+                                    child: Container(
+                                      height: 106,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 26),
+                                  const Text(
+                                    'Jahoon Joo',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Align(
+                                alignment: Alignment.center,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.orange,
+                                    shape: BoxShape.circle,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(.3),
+                                        blurRadius: 4,
+                                      )
+                                    ],
+                                  ),
+                                  width: 40,
+                                  height: 40,
+                                ).marginOnly(top: 40),
+                              ),
+                            ],
                           ),
                         ),
-                        itemCount: 3,
                       ),
+                      itemCount: 80,
                     ),
                   ),
                 ],
