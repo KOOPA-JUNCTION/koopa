@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:koopa/app/modules/home/bindings/home_binding.dart';
@@ -68,5 +69,12 @@ class RootController extends GetxController {
     if (_pages[index] == '') return;
     _pageIndex(index);
     Get.offAllNamed(_pages[index], id: _navigatorKey);
+  }
+
+  void goToGetPhoto() async {
+    final result = await FilePicker.platform.pickFiles(type: FileType.image);
+    if (result?.files.isEmpty ?? true) return;
+    final file = result!.files.first;
+    Get.toNamed(Routes.IMAGE_DETAIL, arguments: {'file': file});
   }
 }

@@ -20,6 +20,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Pretendard',
         colorScheme: Get.theme.colorScheme.copyWith(
+          primary: const Color(0xff1e299c),
           secondary: const Color(0xff1e299c),
         ),
         appBarTheme: const AppBarTheme(

@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -84,14 +86,15 @@ class RootView extends GetView<RootController> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             FloatingActionButton(
-                              onPressed: () {},
+                              onPressed: controller.goToGetPhoto,
                               child: const Icon(Icons.photo_outlined),
                             ),
-                            const SizedBox(width: 60),
-                            FloatingActionButton(
-                              onPressed: () {},
-                              child: const Icon(Icons.camera_alt_outlined),
-                            ),
+                            if (!GetPlatform.isWeb) const SizedBox(width: 60),
+                            if (!GetPlatform.isWeb)
+                              FloatingActionButton(
+                                onPressed: () {},
+                                child: const Icon(Icons.camera_alt_outlined),
+                              ),
                           ],
                         ),
                         const SizedBox(height: 40),

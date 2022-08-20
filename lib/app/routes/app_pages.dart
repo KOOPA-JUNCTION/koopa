@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/image_detail/bindings/image_detail_binding.dart';
+import '../modules/image_detail/views/image_detail_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/root/bindings/root_binding.dart';
@@ -38,6 +40,11 @@ class AppPages {
       name: _Paths.PROFILE,
       page: () => const ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.IMAGE_DETAIL,
+      page: () => const ImageDetailView(),
+      binding: ImageDetailBinding(),
     ),
   ];
 }

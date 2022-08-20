@@ -21,5 +21,9 @@
     "title": "Stats",
     "rankings": "Rankings",
     "activity": "Activity"
+  },
+  "imageDetail": {
+    "title": "Detail",
+    "create": "Create NFT"
   }
 }
