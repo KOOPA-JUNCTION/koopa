@@ -2,3 +2,5 @@ include: package:flutter_lints/flutter.yaml
 linter:
   rules:
     
+analyzer:
+  exclude: [lib/**/*.g.dart, lib/app/routes/**]
