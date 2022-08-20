@@ -21,7 +21,7 @@ class RootController extends GetxController {
   final _pages = [
     Routes.HOME,
     Routes.STATS,
-    Routes.SEARCH,
+    '',
     Routes.SEARCH,
     Routes.PROFILE,
   ];
@@ -63,6 +63,7 @@ class RootController extends GetxController {
 
   void changePage(int index) {
     if (_pageIndex.value == index) return;
+    if (_pages[index] == '') return;
     _pageIndex(index);
     Get.offAllNamed(_pages[index], id: _navigatorKey);
   }
