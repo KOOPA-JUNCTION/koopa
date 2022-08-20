@@ -27,6 +27,7 @@ class App extends StatelessWidget {
           backgroundColor: Color(0xFFF5F5F5),
           foregroundColor: Colors.black,
           elevation: 0,
+          centerTitle: true,
         ),
         scaffoldBackgroundColor: Colors.white, 
       ),

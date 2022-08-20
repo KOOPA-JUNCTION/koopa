@@ -9,6 +9,7 @@ abstract class Routes {
   static const SEARCH = _Paths.SEARCH;
   static const PROFILE = _Paths.PROFILE;
   static const IMAGE_DETAIL = _Paths.IMAGE_DETAIL;
+  static const GENERATE_NFT = _Paths.GENERATE_NFT;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const SEARCH = '/search';
   static const PROFILE = '/profile';
   static const IMAGE_DETAIL = '/image-detail';
+  static const GENERATE_NFT = '/generate-nft';
 }

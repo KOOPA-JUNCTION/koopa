@@ -24,7 +24,7 @@ class ImageDetailView extends GetView<ImageDetailController> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: controller.goToGenerateNFT,
                   child: Text(LocaleKeys.imageDetail_create.tr),
                 ),
               ],

@@ -25,5 +25,8 @@
   "imageDetail": {
     "title": "Detail",
     "create": "Create NFT"
+  },
+  "generateNft": {
+    "title": "Detail of NFT"
   }
 }

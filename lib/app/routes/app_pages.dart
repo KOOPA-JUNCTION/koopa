@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/generate_nft/bindings/generate_nft_binding.dart';
+import '../modules/generate_nft/views/generate_nft_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/image_detail/bindings/image_detail_binding.dart';
@@ -45,6 +47,11 @@ class AppPages {
       name: _Paths.IMAGE_DETAIL,
       page: () => const ImageDetailView(),
       binding: ImageDetailBinding(),
+    ),
+    GetPage(
+      name: _Paths.GENERATE_NFT,
+      page: () => const GenerateNftView(),
+      binding: GenerateNftBinding(),
     ),
   ];
 }

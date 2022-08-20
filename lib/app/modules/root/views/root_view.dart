@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -8,44 +6,6 @@ import 'package:get/get.dart';
 import '../../../../generated/locales.g.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/root_controller.dart';
-
-class _NavigationBarItem extends StatelessWidget {
-  final String title;
-  final String icon;
-  final int currentIndex;
-  final int index;
-  final Function(int) onChange;
-
-  final Color color;
-
-  const _NavigationBarItem({
-    required this.title,
-    required this.icon,
-    required this.currentIndex,
-    required this.index,
-    required this.onChange,
-  }) : color = currentIndex == index
-            ? const Color(0xff1e299c)
-            : const Color(0xff7e7e7d);
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        children: [
-          SvgPicture.asset(
-            'assets/icons/$icon.svg',
-            color: color,
-          ),
-          Text(
-            title,
-            style: TextStyle(color: color),
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 class RootView extends GetView<RootController> {
   const RootView({super.key});

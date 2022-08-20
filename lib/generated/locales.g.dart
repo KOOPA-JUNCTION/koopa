@@ -27,6 +27,7 @@ class LocaleKeys {
   static const stats_activity = 'stats_activity';
   static const imageDetail_title = 'imageDetail_title';
   static const imageDetail_create = 'imageDetail_create';
+  static const generateNft_title = 'generateNft_title';
 }
 
 class Locales {
@@ -50,5 +51,6 @@ class Locales {
     'stats_activity': 'Activity',
     'imageDetail_title': 'Detail',
     'imageDetail_create': 'Create NFT',
+    'generateNft_title': 'Detail of NFT',
   };
 }
