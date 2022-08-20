@@ -16,6 +16,7 @@ class HomeView extends GetView<HomeController> {
           fontWeight: FontWeight.w900,
           color: const Color(0xff1e299c),
         ),
+        automaticallyImplyLeading: false,
         centerTitle: true,
       ),
       body: Center(

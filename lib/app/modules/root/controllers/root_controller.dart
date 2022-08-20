@@ -26,6 +26,8 @@ class RootController extends GetxController {
     Routes.PROFILE,
   ];
 
+  final centerOpened = false.obs;
+
   Route? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.HOME:

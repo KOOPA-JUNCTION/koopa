@@ -65,14 +65,27 @@ class RootView extends GetView<RootController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Navigator(
-        key: controller.navigatorKey,
-        initialRoute: Routes.HOME,
-        onGenerateRoute: controller.onGenerateRoute,
+      body: Stack(
+        children: [
+          Navigator(
+            key: controller.navigatorKey,
+            initialRoute: Routes.HOME,
+            onGenerateRoute: controller.onGenerateRoute,
+          ),
+          Obx(
+            () => controller.centerOpened.isTrue
+                ? Container(
+                    color: Colors.black.withOpacity(.4),
+                  )
+                : Container(),
+          )
+        ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
+      floatingActionButton: Obx(
+        () => FloatingActionButton(
+          onPressed: controller.centerOpened.toggle,
+          child: Icon(controller.centerOpened.isTrue ? Icons.close : Icons.add),
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: Obx(
@@ -97,41 +110,6 @@ class RootView extends GetView<RootController> {
           ],
         ),
       ),
-      // bottomNavigationBar: BottomAppBar(
-      //   child: Row(
-      //     children: [
-      //       _NavigationBarItem(
-      //         currentIndex: controller.pageIndex,
-      //         icon: 'home',
-      //         index: 0,
-      //         onChange: controller.changePage,
-      //         title: LocaleKeys.home_title.tr,
-      //       ),
-      //       _NavigationBarItem(
-      //         currentIndex: controller.pageIndex,
-      //         icon: 'home',
-      //         index: 1,
-      //         onChange: controller.changePage,
-      //         title: LocaleKeys.home_title.tr,
-      //       ),
-      //       Expanded(child: Container()),
-      //       _NavigationBarItem(
-      //         currentIndex: controller.pageIndex,
-      //         icon: 'home',
-      //         index: 2,
-      //         onChange: controller.changePage,
-      //         title: LocaleKeys.home_title.tr,
-      //       ),
-      //       _NavigationBarItem(
-      //         currentIndex: controller.pageIndex,
-      //         icon: 'home',
-      //         index: 3,
-      //         onChange: controller.changePage,
-      //         title: LocaleKeys.home_title.tr,
-      //       ),
-      //     ],
-      //   ),
-      // ),
     );
   }
 }
