@@ -20,7 +20,7 @@ platform :ios do
   lane :internal do
     sh("flutter", "build", "ipa", "--obfuscate", "--split-debug-info=debug-info", "--release")
     upload_to_testflight(
-      ipa: "../build/ios/ipa/bigcha_flutter_v2.ipa"
+      ipa: "../build/ios/ipa/koopa.ipa"
     )
   end
 end
