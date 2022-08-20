@@ -1,2 +1,2 @@
-json_key_file("pc-api-7406882483388754334-767-49712825cade.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+json_key_file("pc-api-7406882483388754334-767-089bd64c4d23.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
 package_name("is.cra1nbow.koopa") # e.g. com.krausefx.app
