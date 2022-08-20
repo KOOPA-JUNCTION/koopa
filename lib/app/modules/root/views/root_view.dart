@@ -69,7 +69,7 @@ class RootView extends GetView<RootController> {
         children: [
           Navigator(
             key: controller.navigatorKey,
-            initialRoute: Routes.HOME,
+            initialRoute: Routes.PROFILE,
             onGenerateRoute: controller.onGenerateRoute,
           ),
           Obx(
