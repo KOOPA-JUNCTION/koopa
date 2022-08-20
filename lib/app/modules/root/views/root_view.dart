@@ -76,7 +76,7 @@ class RootView extends GetView<RootController> {
                                   color: Colors.transparent,
                                   child: InkWell(
                                     borderRadius: BorderRadius.circular(32),
-                                    onTap: controller.goToGetPhoto,
+                                    onTap: controller.goToGetCamera,
                                     child: const Padding(
                                       padding: EdgeInsets.all(16),
                                       child: Icon(
