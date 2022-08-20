@@ -14,5 +14,7 @@
     "allCategories": "All Categories",
     "trending": "Trending Collections"
   },
-  "profile": {}
+  "profile": {
+    "my": "My Inventory"
+  }
 }

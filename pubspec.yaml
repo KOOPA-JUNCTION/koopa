@@ -18,12 +18,11 @@ dev_dependencies:
     sdk: flutter
 
 flutter: 
-  uses-material-design: true
-  assets:
+  assets: 
     - assets/icons/
-  fonts:
+  fonts: 
     - family: Pretendard
-      fonts:
+      fonts: 
         - asset: assets/fonts/Pretendard/Pretendard-Thin.ttf
           weight: 100
         - asset: assets/fonts/Pretendard/Pretendard-ExtraLight.ttf
@@ -42,5 +41,5 @@ flutter:
           weight: 800
         - asset: assets/fonts/Pretendard/Pretendard-Black.ttf
           weight: 900
-
+  uses-material-design: true
 

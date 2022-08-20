@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../../generated/locales.g.dart';
 import '../controllers/profile_controller.dart';
 
 class _ProfileButton extends StatelessWidget {
@@ -50,10 +51,11 @@ class _ProfileButton extends StatelessWidget {
                     Text(id),
                   ],
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.keyboard_arrow_right),
-                )
+                const Icon(
+                  Icons.keyboard_arrow_right_rounded,
+                  size: 40,
+                  color: Color(0xff7e7e7d),
+                ),
               ],
             ),
           ),
@@ -86,7 +88,84 @@ class ProfileView extends GetView<ProfileController> {
                 name: '주자훈',
               ),
             ),
-          )
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            sliver: SliverToBoxAdapter(
+              child: Text(
+                LocaleKeys.profile_my.tr,
+                style: Get.textTheme.bodyLarge!.copyWith(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.all(20),
+            sliver: SliverGrid(
+              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 165,
+                childAspectRatio: 165 / 180,
+                crossAxisSpacing: 20,
+                mainAxisSpacing: 20,
+              ),
+              delegate: SliverChildBuilderDelegate(
+                (_, index) => Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        blurRadius: 4,
+                      ),
+                    ],
+                  ),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: () {},
+                      borderRadius: BorderRadius.circular(16),
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(16),
+                              topRight: Radius.circular(16),
+                            ),
+                            child: Container(
+                              color: Colors.green,
+                              height: 128,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10,
+                              vertical: 14,
+                            ),
+                            child: Row(
+                              children: [
+                                const Text(
+                                  '부산 광안리',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Expanded(child: Container()),
+                                const Text('0.039')
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                childCount: 10,
+              ),
+            ),
+          ),
         ],
       ),
     );

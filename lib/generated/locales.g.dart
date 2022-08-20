@@ -21,6 +21,7 @@ class LocaleKeys {
   static const search_hintText = 'search_hintText';
   static const search_allCategories = 'search_allCategories';
   static const search_trending = 'search_trending';
+  static const profile_my = 'profile_my';
 }
 
 class Locales {
@@ -38,5 +39,6 @@ class Locales {
     'search_hintText': 'Search Koopa',
     'search_allCategories': 'All Categories',
     'search_trending': 'Trending Collections',
+    'profile_my': 'My Inventory',
   };
 }
