@@ -1,4 +1,4 @@
-package com.example.koopa
+package is.cra1nbow.koopa
 
 import io.flutter.embedding.android.FlutterActivity
 
