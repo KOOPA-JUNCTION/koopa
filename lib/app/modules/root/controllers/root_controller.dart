@@ -1,8 +1,8 @@
 import 'dart:math';
 
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:koopa/app/modules/home/bindings/home_binding.dart';
 import 'package:koopa/app/modules/home/views/home_view.dart';
 import 'package:koopa/app/modules/profile/bindings/profile_binding.dart';
@@ -72,9 +72,14 @@ class RootController extends GetxController {
   }
 
   void goToGetPhoto() async {
-    final result = await FilePicker.platform.pickFiles(type: FileType.image);
-    if (result?.files.isEmpty ?? true) return;
-    final file = result!.files.first;
-    Get.toNamed(Routes.IMAGE_DETAIL, arguments: {'file': file});
+    final result = await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (result == null) return;
+    Get.toNamed(Routes.IMAGE_DETAIL, arguments: {'file': result});
+  }
+
+  void goToGetCamera() async {
+    final result = await ImagePicker().pickImage(source: ImageSource.camera);
+    if (result == null) return;
+    Get.toNamed(Routes.IMAGE_DETAIL, arguments: {'file': result});
   }
 }
