@@ -22,6 +22,9 @@ class LocaleKeys {
   static const search_allCategories = 'search_allCategories';
   static const search_trending = 'search_trending';
   static const profile_my = 'profile_my';
+  static const stats_title = 'stats_title';
+  static const stats_rankings = 'stats_rankings';
+  static const stats_activity = 'stats_activity';
 }
 
 class Locales {
@@ -40,5 +43,8 @@ class Locales {
     'search_allCategories': 'All Categories',
     'search_trending': 'Trending Collections',
     'profile_my': 'My Inventory',
+    'stats_title': 'Stats',
+    'stats_rankings': 'Rankings',
+    'stats_activity': 'Activity',
   };
 }

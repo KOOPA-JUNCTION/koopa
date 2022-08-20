@@ -16,5 +16,10 @@
   },
   "profile": {
     "my": "My Inventory"
+  },
+  "stats": {
+    "title": "Stats",
+    "rankings": "Rankings",
+    "activity": "Activity"
   }
 }
